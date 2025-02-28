@@ -10,8 +10,8 @@
     <!-- font css -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        
-        .popinsFamily{
+
+        .popinsFamily {
             font-family: "Poppins", sans-serif;
         }
     </style>
@@ -19,27 +19,92 @@
     <title>Dev Board</title>
 </head>
 
-<body class="bg-[#f4f7ff] h-screen py-4 popinsFamily">
-    <header class="container mx-auto max-w-[90%] bg-white shadow-md rounded-lg">
+<body class="bg-[#f4f7ff]  py-4 popinsFamily">
+    <header class="container mx-auto max-w-[95%] bg-white shadow-md rounded-lg">
         <nav class="py-4 px-4 flex justify-between items-center ">
             <!-- logo  -->
             <div class="flex items-center gap-x-2 ">
                 <img src="assets/logo.png" alt="logo image">
-                <h1 class="text-3xl">Dev<span class="text-black font-bold ">Board</span> </h1>
+                <h1 class="text-lg lg:text-3xl">Dev<span class="text-black font-bold ">Board</span> </h1>
             </div>
             <!-- theme   -->
-            <div class="flex items-center gap-x-6 ">
-                <div class="flex space-x-2 rounded-3xl bg-[#f4f7ff] p-4">
+            <div class="flex items-center gap-x-2 lg:gap-x-6 ">
+                <div class="flex space-x-2 rounded-3xl bg-[#f4f7ff] p-4 hover:cursor-pointer">
                     <img src="assets/checkbox.png" alt="checkbox">
-                    <span class="font-bold text-2xl">24</span>
+                    <span class="font-bold text-2xl" id="navCount">23</span>
                 </div>
-               <img src="assets/theme-btn.png" alt="theme" class="hover:cursor-pointer" id="changeTheme">
+                <img src="assets/theme-btn.png" alt="theme"
+                    class="btn bg-transparent border-none shadow-none hover:bg-transparent" id="changeTheme">
             </div>
         </nav>
     </header>
-    <main>
+    <main class="max-w-[95%] mx-auto grid grid-cols-1 md:grid-cols-4 md:gap-x-4 py-8 min-h-screen gap-y-4">
+        <!-- tasked section -->
+        <section class="col-span-3 border bg-white rounded-lg p-4">
+            <!-- main header section -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-3">
+                <!-- task assing -->
+                <div class="flex items-center bg-[#F4F7FF] rounded-lg p-3 col-span-1 gap-x-2">
+                    <div class="bg-white p-2 rounded-full">
+                        <img src="assets/checkbox.png" alt="checkbox" class="max-w-[20px]">
+                    </div>
+                    <div>
+                        <p class="">Task Assigned</p>
+                        <p class="font-bold">0<span id="taskAssign">6</span></p>
+                    </div>
+                </div>
 
+                <!-- Discover section -->
+                <div class="col-span-2 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-lg">
+                    <div class="flex items-center p-4 text-white gap-x-3">
+                        <div class="bg-white rounded-full">
+                            <img src="assets/board.png" alt="board">
+                        </div>
+                        <p class="font-medium  text-2xl">Discover Something New Today!</p>
+                    </div>
+                </div>
+
+                <!-- Date  -->
+                <div class=" col-span-1 flex items-center bg-[#F4F7FF] rounded-lg p-3 gap-x-2">
+                    <div class="bg-white p-2 rounded-full">
+                        <img src="assets/calender.png" alt="calender" class="max-w-[20px]">
+                    </div>
+                    <div>
+                        <p id="dayShort"></p>
+                        <p id="FullDate" class="font-bold"></p>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <hr class="border-t-slate-500 border-dotted my-4">
+            <!-- task card section -->
+
+            <section id="takeCard" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-3">
+               <!-- cards -->
+            </section>
+        </section>
+
+
+        <!-- activity log -->
+        <section class="col-span-1  bg-white rounded-lg overflow-auto">
+            <div class="text-center content-center">
+                <div class="flex justify-center items-center py-6 gap-x-4">
+                    <img src="assets/activity.png" alt="Activity Log">
+                    <h3 class="text-xl font-medium">Activity Log</h3>
+                </div>
+                <button class="btn btn-primary hover:cursor-pointer text-white" id="clearHistory">Clear History</button>
+            </div>
+            <hr class="border-t-slate-600 border-dotted my-4">
+
+            <!-- adding history  -->
+            <div id="history" class="overflow-auto p-4 space-y-4">
+               
+            </div>
+        </section>
     </main>
+    <script src="javaScript/card.js"></script>
     <script src="./utilities/utilities.js" defer></script>
     <script src="./javaScript/script.js" defer></script>
 </body>
