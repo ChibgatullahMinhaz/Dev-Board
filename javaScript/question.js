@@ -1,9 +1,7 @@
-
-
 const Questions = [
     {
         Qs: "Question-1: What are the different ways to select an element in the DOM?",
-        Answer:"In JavaScript , Different ways to select an element in DOM , querySelectorAll(),querySelector(),getElementsByTagName(),getElementsByClassName(),getElementById()"
+        Answer:"In JavaScript  Different ways to select an element DOM in querySelectorAll() and querySelector() and getElementsByTagName() and getElementsByClassName() and getElementById() "
     }
     ,
     {

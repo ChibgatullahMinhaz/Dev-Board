@@ -35,7 +35,6 @@ for (let i = 0; i < allbtns.length; i++) {
         alert('Board Updated Successfully.');
         const cardTitle = allbtns[i].dataset.taskTitle;
 
-        // Update history
         const historyContainer = document.getElementById('history');
         const hDiv = document.createElement('div');
         hDiv.innerHTML = `
@@ -45,10 +44,8 @@ for (let i = 0; i < allbtns.length; i++) {
         `;
         historyContainer.appendChild(hDiv);
 
-        // Disable the button
         allbtns[i].setAttribute("disabled", "true");
 
-        // Check if all tasks are completed
         if (conMessageCount === tasktCount) {
             alert('Congrats!!! You have completed all the current tasks.');
         }
@@ -56,4 +53,11 @@ for (let i = 0; i < allbtns.length; i++) {
 }
 
 
+// history clear 
+function clearHsitory() {
+    document.getElementById('clearHistory').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('history').innerHTML = '';
+    })
+}
 clearHsitory()

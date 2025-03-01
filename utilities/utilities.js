@@ -1,4 +1,4 @@
-
+// go back
 document.getElementById('bkdesk').addEventListener('click', function(event){
     event.preventDefault();
     window.location.href = "../index.html"
@@ -14,13 +14,6 @@ function GetReandomTheme() {
     return themeColor;
 }
 
-// history clear 
-function clearHsitory() {
-    document.getElementById('clearHistory').addEventListener('click', function (event) {
-        event.preventDefault();
-        document.getElementById('history').innerHTML = '';
-    })
-}
 // get date 
 function GetDate() {
     const now = new Date();
