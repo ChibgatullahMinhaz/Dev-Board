@@ -1,7 +1,4 @@
-document.getElementById('bkdesk').addEventListener('click', function(event){
-    event.preventDefault();
-    window.location.href = "../index.html"
-});
+
 
 const Questions = [
     {

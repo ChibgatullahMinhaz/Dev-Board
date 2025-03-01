@@ -1,3 +1,8 @@
+
+document.getElementById('bkdesk').addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = "../index.html"
+});
 // create reandom theme Color
 function GetReandomTheme() {
     const hexCharacters = '012AB345F6789CDE';

@@ -1,3 +1,8 @@
+// discover
+document.getElementById('discover').addEventListener('click',function (event) {
+    event.preventDefault();
+   window.location.href = './view/Blog.html'
+});
 // Set random theme 
 document.getElementById('changeTheme').addEventListener('click', function (event) {
     event.preventDefault()
@@ -9,11 +14,6 @@ document.getElementById('dayShort').innerText = GetDate();
 document.getElementById('FullDate').innerText = getFullDate();
 const time = getTime();
 
-// discover
-document.getElementById('discover').addEventListener('click',function (event) {
-    event.preventDefault();
-   window.location.href = './view/Blog.html'
-});
 
 // // Initial counts
 let tasktCount = tasked.length;
