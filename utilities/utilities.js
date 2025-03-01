@@ -10,11 +10,11 @@ function GetReandomTheme() {
 }
 
 // history clear 
-function clearHsitory (){
-document.getElementById('clearHistory').addEventListener('click', function (event) {
-    event.preventDefault();
-    document.getElementById('history').innerHTML = '';
-})
+function clearHsitory() {
+    document.getElementById('clearHistory').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('history').innerHTML = '';
+    })
 }
 clearHsitory()
 // get date 
@@ -39,9 +39,30 @@ function getTime() {
     const getSeconds = date.getSeconds();
     const ampm = getHours >= 12 ? 'PM' : 'AM';
     getHours = getHours % 12;
-    getHours = getHours ? getHours : 12; 
+    getHours = getHours ? getHours : 12;
 
     const formattedTime = `${getHours}:${getMinutes < 10 ? '0' + getMinutes : getMinutes}:${getSeconds < 10 ? '0' + getSeconds : getSeconds} ${ampm}`;
 
     return formattedTime;
+}
+
+// dynamic card looding 
+function cardLoading() {
+    const cardContainer = document.getElementById('takeCard');
+    for (const taks of tasked) {
+        const div = document.createElement('div');
+        div.classList.add("bg-[#f4f7ff]", "p-4", "space-y-4", "rounded-lg")
+        div.innerHTML = `
+         <button class="btn bg-white hover:bg-white border-none">${taks.company}</button>
+      <h1 class="font-medium text-xl mt-2">${taks.taskTitle} </h1>
+    <div class="h-[60px] bg-white overflow-hidden text-gray-500 p-1"> ${taks.des} </div>
+    <div class="flex justify-between items-center">
+    <div>
+     <p class="text-gray-500">Deadline</p>
+     <p class="font-medium">21 March 2025</p>
+      </div>
+      <button class="btn btn-primary complete-btn">Completed</button> </div>
+        `
+        cardContainer.appendChild(div)
+    }
 }

@@ -9,6 +9,11 @@ document.getElementById('dayShort').innerText = GetDate();
 document.getElementById('FullDate').innerText = getFullDate();
 const time = getTime();
 
+// discover
+document.getElementById('discover').addEventListener('click',function (event) {
+    event.preventDefault();
+   window.location.href = '../view/Blog.html'
+});
 
 // // Initial counts
 let tasktCount = tasked.length;
@@ -16,7 +21,6 @@ let navCount = parseFloat(document.getElementById('navCount').innerText);
 let conMessageCount = 0;  
 
 document.getElementById('taskAssign').innerText = tasktCount;
-document.getElementById('navCount').innerText = navCount;
 
 const allbtns = document.querySelectorAll(".complete-btn");
 for (let i = 0; i < allbtns.length; i++) {
