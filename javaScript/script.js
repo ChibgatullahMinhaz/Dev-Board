@@ -12,7 +12,7 @@ const time = getTime();
 // discover
 document.getElementById('discover').addEventListener('click',function (event) {
     event.preventDefault();
-   window.location.href = '../view/Blog.html'
+   window.location.href = './view/Blog.html'
 });
 
 // // Initial counts

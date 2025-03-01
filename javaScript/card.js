@@ -32,5 +32,4 @@ const tasked = [
 ];
 
 
-
 window.onload= cardLoading()
