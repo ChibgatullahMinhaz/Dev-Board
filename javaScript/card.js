@@ -7,7 +7,7 @@ const tasked = [
     {
         company: "CloudSync",
         taskTitle: "Add Dark Mode",
-        des: "Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly"
+        des: "Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect."
     },
     {
         company: "SwiftPay",

@@ -58,7 +58,7 @@ function cardLoading() {
         div.innerHTML = `
          <button class="btn bg-white hover:bg-white border-none">${taks.company}</button>
       <h1 class="font-medium text-xl mt-2">${taks.taskTitle} </h1>
-    <div class="h-[60px] bg-white overflow-hidden text-gray-500 p-1"> ${taks.des} </div>
+    <div class="h-[60px] bg-white line-clamp-2 overflow-hidden text-gray-500 p-1"> ${taks.des} </div>
     <div class="flex justify-between items-center">
     <div>
      <p class="text-gray-500">Deadline</p>
