@@ -21,7 +21,6 @@ function clearHsitory() {
         document.getElementById('history').innerHTML = '';
     })
 }
-clearHsitory()
 // get date 
 function GetDate() {
     const now = new Date();

@@ -54,3 +54,6 @@ for (let i = 0; i < allbtns.length; i++) {
         }
     });
 }
+
+
+clearHsitory()
