@@ -53,11 +53,5 @@ for (let i = 0; i < allbtns.length; i++) {
 }
 
 
-// history clear 
-function clearHsitory() {
-    document.getElementById('clearHistory').addEventListener('click', function (event) {
-        event.preventDefault();
-        document.getElementById('history').innerHTML = '';
-    })
-}
+
 clearHsitory()
